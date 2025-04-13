@@ -5,15 +5,15 @@ export const Navbar = () => {
   const links = [
     {
       name: "Work",
-      url: "",
+      url: "/projects",
     },
     {
       name: "AboutMe",
-      url: "",
+      url: "/about-me",
     },
     {
       name: "Resume",
-      url: "",
+      url: "https://drive.google.com/file/d/1hc34WUyS68P_b86xGZ56tgw-BVcXVgbp/view?usp=sharing",
     },
   ];
 
@@ -23,6 +23,7 @@ export const Navbar = () => {
         return (
           <Link
             to={link.url}
+            key={link.name}
             className="border border-black px-5 py-2 rounded-full text-lg cursor-pointer"
           >
             {link.name}

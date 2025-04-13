@@ -4,13 +4,13 @@ import image from "../assets/Images/profilephoto.png";
 export const MyIntro = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-800">
-      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl p-10">
         {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-light mb-6 ">
-            Hey, this is Bhargavi <br /> I learn to build future of Technology.
+            Hey,this is Bhargavi <br /> I learn to build future of Technology.
           </h1>
-          <button className="mt-4 border border-black px-6 py-3 rounded-full text-lg">
+          <button className="mt-4 mb-4 border border-black px-6 py-3 rounded-full text-lg">
             Wanna know my work?
           </button>
         </div>
