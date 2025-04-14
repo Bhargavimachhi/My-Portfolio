@@ -1,5 +1,6 @@
 import React from "react";
 import image from "../assets/Images/profilephoto.png";
+import { Link } from "react-router-dom";
 
 export const MyIntro = () => {
   return (
@@ -10,9 +11,12 @@ export const MyIntro = () => {
           <h1 className="text-4xl md:text-5xl font-light mb-6 ">
             Hey,this is Bhargavi <br /> I learn to build future of Technology.
           </h1>
-          <button className="mt-4 mb-4 border border-black px-6 py-3 rounded-full text-lg">
+          <Link
+            to="/projects"
+            className="mt-4 mb-4 border border-black px-6 py-3 rounded-full text-lg cursor-pointer"
+          >
             Wanna know my work?
-          </button>
+          </Link>
         </div>
 
         {/* Image */}

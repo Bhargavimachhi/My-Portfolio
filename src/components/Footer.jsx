@@ -1,23 +1,9 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { links } from "../assets/data/links";
 
 export const Footer = () => {
-  const links = [
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/bhargavi-machhi/",
-    },
-    {
-      name: "Leetcode",
-      url: "https://leetcode.com/u/bhargavimachhi/",
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/Bhargavimachhi/",
-    },
-  ];
-
   return (
     <nav className="w-full sm:flex justify-end space-x-4 pt-6 mb-5">
       <div className="w-full left flex align-items-centre ml-5 mt-5 pt-6">
