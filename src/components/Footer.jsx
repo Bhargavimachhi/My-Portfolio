@@ -6,7 +6,7 @@ import { links } from "../assets/data/links";
 export const Footer = () => {
   return (
     <nav className="w-full sm:flex justify-end space-x-4 pt-6 mb-5">
-      <div className="w-full left flex align-items-centre ml-5 mt-5 pt-6">
+      <div className="w-full sm:left flex align-items-centre max-sm:text-center ml-5 mt-5 pt-6">
         Made by me with <FaHeart className="text-red-500 mt-1 ml-2" />
       </div>
       <div className="w-full flex justify-end space-x-4 pt-6 pr-5 mb-0">

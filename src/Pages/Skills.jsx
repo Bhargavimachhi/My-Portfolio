@@ -51,14 +51,27 @@ export const Skills = () => {
       name: "Linux",
       logo: "https://cdn.worldvectorlogo.com/logos/linux-tux.svg",
     },
+    {
+      name: "Canva",
+      logo: "",
+    },
+    {
+      name: "Figma",
+      logo: "",
+    },
+    {
+      name: "Canva",
+      logo: "",
+    },
   ];
 
   return (
     <>
-      <div className="min-h-screen bg-color-fefae0 p-8 ">
+      <div className="min-h-screen p-8 ">
         <h1 className="text-4xl font-bold mb-8 text-center">My Skills</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-5 justify-items-center">
           {skills.map((skill) => (
+            <>
             <div
               key={skill.name}
               className="flex items-center justify-center bg-white bg-opacity-10 rounded-full p-6 shadow-lg hover:bg-opacity-20 transition duration-300 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32"
@@ -69,6 +82,7 @@ export const Skills = () => {
                 className="w-full h-full object-contain rounded-full"
               />
             </div>
+            </>
           ))}
         </div>
       </div>
