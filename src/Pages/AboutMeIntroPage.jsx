@@ -30,15 +30,17 @@ export const AboutMeIntroPage = () => {
             </h2>
 
             <h2 className="text-lg font-light mb-3">
-              💡 This curiosity and enthusiasm naturally led me to pursue a
-              future in the field of computer engineering. In 2022, I began my
+              💡 This curiosity and enthusiasm naturally led me to pursue my
               journey in higher education with a Bachelor's degree in Computer
               Engineering.
             </h2>
 
+            <h1 className="text-2xl md:text-3xl font-light mb-3 mt-6">
+              Fun Fact About Me
+            </h1>
+
             <h2 className="text-lg font-light mb-3">
-              ♟️🏋️‍♀️ When i am not coding you will find me playing chess or
-              exercising
+              ♟️🏋️‍♀️ When i am not coding you will find me playing chess or exercising
             </h2>
 
             <h2 className="text-lg font-light mb-3">

@@ -6,6 +6,7 @@ import dataScience from "../Images/data-science.png";
 import node from "../Images/node.png";
 import ai from "../Images/ai.jpg";
 import oops from "../Images/oops.jpg";
+import java from "../Images/java.webp";
 
 export const skills = [
   {
@@ -22,7 +23,7 @@ export const skills = [
   },
   {
     name: "Java",
-    logo: "https://cdn.worldvectorlogo.com/logos/java-4.svg",
+    logo: java,
   },
   {
     name: "Python",

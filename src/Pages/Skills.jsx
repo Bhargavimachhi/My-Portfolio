@@ -1,4 +1,3 @@
-import { Card } from "@mui/material";
 import { skills } from "../assets/data/skills";
 
 export const Skills = () => {
@@ -12,7 +11,7 @@ export const Skills = () => {
             <>
               <div
                 key={skill.name}
-                className="transition-transform duration-300 border-1 shadow-lg hover:scale-110 hover:shadow-2xl shadow-black/20 bg-white rounded-2xl p-4 flex flex-col items-center justify-center w-40 h-52 mb-6 cursor-pointer"
+                className="transition-transform duration-300 border-1 shadow-lg hover:scale-110 hover:shadow-2xl shadow-black/20 bg-white rounded-3xl p-4 flex flex-col items-center justify-center w-40 h-52 mb-6 cursor-pointer"
               >
                 <img
                   src={skill.logo}

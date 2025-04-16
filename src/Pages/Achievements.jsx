@@ -14,7 +14,8 @@ export const Achievements = () => {
             return (
               <div
                 key={index}
-                className={`flex flex-col sm:flex-row items-center gap-4 my-12 mb-30 ${
+                onClick={() => window.open(achievement.link, "_blank")}
+                className={`transition-transform duration-300 ease-out hover:scale-115 cursor-pointer flex flex-col sm:flex-row items-center gap-4 my-12 mb-30 ${
                   isEven ? "sm:flex-row" : "sm:flex-row-reverse"
                 }`}
               >
@@ -23,7 +24,7 @@ export const Achievements = () => {
                     <p
                       key={i}
                       className={`text-base sm:text-lg md:text-xl font-medium p-1 ${
-                        isEven ? "text-right" : ""
+                        isEven ? "sm:text-right max-sm:text-center" : ""
                       }`}
                     >
                       {description}
