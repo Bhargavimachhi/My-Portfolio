@@ -3,11 +3,13 @@ import { Route, Routes } from "react-router-dom";
 import { Projects } from "./Pages/Projects";
 import { NotFoundPage } from "./components/NotFoundPage";
 import { AboutMe } from "./Pages/AboutMe";
+import { Puzzle } from "./Pages/Puzzle";
 
 function App() {
   return (
     <>
       <Routes>
+        <Route path="/puzzle" element={<Puzzle />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/about-me" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />

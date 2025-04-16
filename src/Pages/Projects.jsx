@@ -1,8 +1,20 @@
+import { useNavigate } from "react-router-dom";
 import { projects } from "../assets/data/projects";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/NavBar";
+import { useEffect } from "react";
 
 export const Projects = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const puzzleData = JSON.parse(localStorage.getItem("puzzle"));
+    if (!puzzleData?.puzzleSolved) {
+      navigate("/puzzle");
+    }
+  }, [navigate]);
+
+  
   return (
     <>
       <Navbar />
