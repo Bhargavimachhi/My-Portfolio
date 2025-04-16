@@ -13,7 +13,7 @@ export const Navbar = () => {
     },
     {
       name: "Resume",
-      url: "https://drive.google.com/file/d/1hc34WUyS68P_b86xGZ56tgw-BVcXVgbp/view?usp=sharing",
+      url: "https://drive.google.com/file/d/1_WlpZjqprmosIAp85O-xUK0-X1cu4ADT/view?usp=sharing",
     },
   ];
 
