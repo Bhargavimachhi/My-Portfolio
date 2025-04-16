@@ -1,8 +1,11 @@
-import {projects} from '../assets/data/projects'
-export const Projects = () => {
+import { projects } from "../assets/data/projects";
+import { Footer } from "../components/Footer";
+import { Navbar } from "../components/NavBar";
 
+export const Projects = () => {
   return (
     <>
+      <Navbar />
       <div className="min-h-screen bg-white p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 ">
           {projects.map((project) => {
@@ -21,6 +24,7 @@ export const Projects = () => {
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
