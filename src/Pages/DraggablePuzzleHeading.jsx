@@ -6,9 +6,12 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export const DraggablePuzzleHeading = () => {
   const nodeRef = useRef(null);
+  const navigate = useNavigate();
   const [hintIndex, setHintIndex] = useState(0);
   const hints = [
     "There are 4 Different Ways to solve this Puzzle, Explore Hints to Solve the Puzzle 🧩",
@@ -23,6 +26,11 @@ export const DraggablePuzzleHeading = () => {
     setTimeout(() => {
       markPuzzleAsSolved();
     }, 2000);
+  };
+
+  const markPuzzleAsSolved = () => {
+    localStorage.setItem("puzzle", JSON.stringify({ puzzleSolved: true }));
+    navigate("/");
   };
 
   const nextHint = () => {
@@ -49,7 +57,7 @@ export const DraggablePuzzleHeading = () => {
             <div className="flex gap-4 mt-4 md:mt-0">
               {/* Skip Button */}
               <button
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition duration-300"
+                className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition duration-300"
                 onClick={skipPuzzle}
               >
                 Skip
@@ -57,7 +65,7 @@ export const DraggablePuzzleHeading = () => {
 
               {/* Hint Popover */}
               <Popover>
-                <PopoverTrigger className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-xl transition duration-300">
+                <PopoverTrigger className="cursor-pointer bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-xl transition duration-300">
                   Hint
                 </PopoverTrigger>
                 <PopoverContent className="w-72 p-4 rounded-xl shadow-xl bg-white flex flex-col items-center relative space-y-4">
@@ -67,7 +75,7 @@ export const DraggablePuzzleHeading = () => {
                   <div className="flex items-center gap-4">
                     <button
                       onClick={prevHint}
-                      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300"
+                      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 cursor-pointer"
                     >
                       <ChevronLeft />
                     </button>
@@ -76,7 +84,7 @@ export const DraggablePuzzleHeading = () => {
                     </span>
                     <button
                       onClick={nextHint}
-                      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300"
+                      className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 cursor-pointer"
                     >
                       <ChevronRight />
                     </button>

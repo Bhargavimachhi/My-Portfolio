@@ -38,9 +38,7 @@ export const Puzzle = () => {
   return (
     <div className="relative w-full bg-[rgba(253,253,253,1)] p-6 flex flex-col items-center overflow-hidden">
       <Toaster />
-      {/* Wrapper for heading and hidden bone */}
       <div className="relative w-fit h-fit ">
-        {/* Bone - underneath, center aligned */}
         <div
           className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer mt-4"
           onClick={boneFound}
@@ -52,7 +50,7 @@ export const Puzzle = () => {
         </div>
 
         {/* Heading - draggable, initially over the bone */}
-        <div className="relative z-30 top-0">
+        <div className="relative z-30">
           <DraggablePuzzleHeading />
         </div>
       </div>

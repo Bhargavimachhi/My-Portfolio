@@ -4,12 +4,12 @@ const PuzzleContext = createContext();
 
 const PuzzleProvider = ({ children }) => {
   const [puzzleSolved, setPuzzleSolved] = useState(() => {
-    const savedData = localStorage.getItem("puzzleSolved");
-    return savedData || {puzzleSolved : false};
+    const savedData = localStorage.getItem("puzzle");
+    return savedData || JSON.stringify({puzzleSolved : false});
   });
 
   useEffect(() => {
-    localStorage.setItem("puzzle", JSON.stringify({puzzleSolved : false}));
+    localStorage.setItem("puzzle", puzzleSolved);
   }, []);
 
   return (
