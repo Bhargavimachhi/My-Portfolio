@@ -4,10 +4,12 @@ import { Projects } from "./Pages/Projects";
 import { NotFoundPage } from "./components/NotFoundPage";
 import { AboutMe } from "./Pages/AboutMe";
 import { Puzzle } from "./Pages/Puzzle";
+import { PuzzleIconButton } from "./Pages/PuzzleIconButton";
 
 function App() {
   return (
     <>
+    <PuzzleIconButton />
       <Routes>
         <Route path="/puzzle" element={<Puzzle />} />
         <Route path="/" element={<HomePage />} />

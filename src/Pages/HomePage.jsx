@@ -4,6 +4,7 @@ import { MyIntro } from "./MyIntro";
 import { Skills } from "./Skills";
 import { Footer } from "../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -18,8 +19,10 @@ export const HomePage = () => {
   return (
     <>
       <Navbar />
-      <MyIntro />
-      <Skills />
+        <BackgroundBeamsWithCollision className="m-0 top-0">
+          <MyIntro />
+          <Skills />
+        </BackgroundBeamsWithCollision>
       <Footer />
     </>
   );

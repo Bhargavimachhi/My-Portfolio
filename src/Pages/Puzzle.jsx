@@ -1,15 +1,37 @@
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { DraggablePuzzleHeading } from "./DraggablePuzzleHeading";
-import video from "../assets/Videos/video.mp4";
-import { Bone } from "lucide-react";
+import {
+  Bone,
+  Clapperboard,
+  Crown,
+  Gift,
+  Ham,
+  Home,
+  Utensils,
+  Volleyball,
+} from "lucide-react";
 import { ExplodingBone } from "./ExplodingBone";
+import dogEating from "../assets/Videos/dog-eating.mp4";
+import dogPlayingWithBall from "../assets/Videos/dog-playing-with-ball.mp4";
+import dogSitting from "../assets/Videos/dog-sitting.mp4";
+import dogWantsFood from "../assets/Videos/dog-wants-food.mp4";
+import dogWithBallons from "../assets/Videos/dog-with-ballons.mp4";
+import dogWithMirror from "../assets/Videos/dog-with-mirror.mp4";
+import dogWithHome from "../assets/Videos/dog-with-home.mp4";
+import dogWithBone from "../assets/Videos/dog-with-bone.mp4";
+import dogJumping from "../assets/Videos/dog-jumping.mp4";
+
+import { FloatingDock } from "@/components/ui/floating-dock";
 
 export const Puzzle = () => {
   const navigate = useNavigate();
   const [showInputText, setShowInputText] = useState(false);
   const [text, setText] = useState("");
+  const [video, setVideo] = useState(dogSitting);
+  const [videoReady, setVideoReady] = useState(true);
+  const videoRef = useRef(null);
   const wrongBoneText = [
     "You got the wrong one again 😜",
     "Uhh Ahh Neither This One 🤷‍♀️",
@@ -17,6 +39,7 @@ export const Puzzle = () => {
   ];
 
   const boneFound = () => {
+    changeVideo(dogWithBone);
     toast.success("Hurray !!! You Found the Bone, now doggy can sleep");
     setTimeout(() => {
       markPuzzleAsSolved();
@@ -47,10 +70,101 @@ export const Puzzle = () => {
     navigate("/");
   };
 
-  useEffect(() => {
-    const dogVideo = document.getElementById("dog-video");
-    dogVideo.playBackRate = 0.5;
-  }, []);
+  const changeVideo = (newVideo) => {
+    setVideoReady(false);
+    setTimeout(() => {
+      setVideo(newVideo);
+      if (videoRef.current) {
+        videoRef.src = newVideo;
+        videoRef.current.play();
+      }
+    }, 500);
+  };
+
+  const dogActionButtons = [
+    {
+      title: "Lunch Time",
+      icon: (
+        <Ham
+          size={50}
+          className="text-rose-400 cursor-pointer"
+          onClick={() => changeVideo(dogEating)}
+        />
+      ),
+    },
+    {
+      title: "Let's Play",
+      icon: (
+        <Volleyball
+          size={50}
+          className="text-blue-500 cursor-pointer"
+          onClick={() => changeVideo(dogPlayingWithBall)}
+        />
+      ),
+    },
+    {
+      title: "I have a Gift",
+      icon: (
+        <Gift
+          size={50}
+          className="text-red-500 cursor-pointer"
+          onClick={() => changeVideo(dogWithBallons)}
+        />
+      ),
+    },
+    {
+      title: "Let's get Ready",
+      icon: (
+        <Clapperboard
+          size={50}
+          className="text-gray-500 cursor-pointer"
+          onClick={() => changeVideo(dogWithMirror)}
+        />
+      ),
+    },
+    {
+      title: "Hungry",
+      icon: (
+        <Utensils
+          size={50}
+          className="text-violet-500 cursor-pointer"
+          onClick={() => changeVideo(dogWantsFood)}
+        />
+      ),
+    },
+    {
+      title: "Home Sweet Home",
+      icon: (
+        <Home
+          size={50}
+          className="text-orange-500 cursor-pointer"
+          onClick={() => changeVideo(dogWithHome)}
+        />
+      ),
+    },
+    {
+      title: "Let's Dance",
+      icon: (
+        <Crown
+          size={50}
+          className="text-yellow-500 cursor-pointer"
+          onClick={() => changeVideo(dogJumping)}
+        />
+      ),
+    },
+  ];
+
+  const exploadingBones = [
+    {
+      className: "absolute left-1/3 top-1/2",
+    },
+    {
+      className: "absolute left-2/3 top-2/3",
+    },
+    {
+      className: "absolute left-1/2 mt-300 pb-100",
+    },
+  ];
 
   return (
     <div className="relative w-full bg-[rgba(253,253,253,1)] p-6 flex flex-col items-center">
@@ -66,36 +180,43 @@ export const Puzzle = () => {
           />
         </div>
 
-        {/* Heading - draggable, initially over the bone */}
         <div className="relative z-30 top-0">
           <DraggablePuzzleHeading />
         </div>
       </div>
 
-      <div onClick={wrongBoneFound} className="absolute left-1/3 top-1/2">
-        <ExplodingBone />
-      </div>
-      <div onClick={wrongBoneFound} className="absolute left-2/3 top-1/3">
-        <ExplodingBone />
-      </div>
-      <div onClick={wrongBoneFound} className="absolute left-1/2 mt-300 pb-100">
-        <ExplodingBone />
-      </div>
+      {exploadingBones.map((bone) => {
+        return (
+          <div onClick={wrongBoneFound} className={bone.className}>
+            <ExplodingBone />
+          </div>
+        );
+      })}
 
-      {/* Video - behind everything */}
-      <div className="relative z-10 mt-10">
+      <div className="relative z-10">
         <video
+          ref={videoRef}
           width={800}
           height={800}
           autoPlay
-          loop
+          loop={video === dogSitting}
           muted
-          onClick={() => setShowInputText(!showInputText)}
           id="dog-video"
-        >
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          onClick={() => setShowInputText(!showInputText)}
+          onCanPlay={() => setVideoReady(true)} // this triggers when video is ready to play
+          className={`relative transition-opacity duration-500 ${
+            videoReady ? "opacity-100" : "opacity-0"
+          }`}
+          src={video}
+          onEnded={() => changeVideo(dogSitting)}
+        ></video>
+
+        <div className="absolute flex flex-wrap items-center justify-center w-full mt-0">
+          <FloatingDock
+            mobileClassName="translate-y-40 h-50"
+            items={dogActionButtons}
+          />
+        </div>
 
         {/* Hint Popover */}
         {showInputText && (

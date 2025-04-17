@@ -45,8 +45,8 @@ export const DraggablePuzzleHeading = () => {
     <>
       <Draggable nodeRef={nodeRef}>
         <div ref={nodeRef} className="cursor-grab active:cursor-grabbing">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 w-full max-w-5xl bg-white p-6 rounded-2xl shadow-md mb-10">
-            <h2 className="w-full text-lg md:text-xl font-bold text-center md:text-left leading-snug text-gray-700">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 w-full max-w-5xl bg-white p-6 rounded-2xl shadow-md">
+            <h2 className="w-full text-lg max-sm:text-base md:text-xl font-bold text-center md:text-left leading-snug text-gray-700">
               Wanna See My Portfolio? Uhhh Ahhh 👀
               <br />
               You need to solve this puzzle first 🧩
