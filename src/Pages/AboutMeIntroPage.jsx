@@ -1,4 +1,4 @@
-import image from "../assets/Images/profilephoto.png";
+import image from "../assets/Images/profile.jpg";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 export const AboutMeIntroPage = () => {

@@ -19,10 +19,13 @@ export const HomePage = () => {
   return (
     <>
       <Navbar />
-        <BackgroundBeamsWithCollision className="m-0 top-0">
-          <MyIntro />
-          <Skills />
-        </BackgroundBeamsWithCollision>
+      <BackgroundBeamsWithCollision>
+        <MyIntro />
+      </BackgroundBeamsWithCollision>
+      <BackgroundBeamsWithCollision>
+        <Skills />
+      </BackgroundBeamsWithCollision>
+
       <Footer />
     </>
   );
