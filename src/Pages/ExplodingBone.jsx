@@ -10,7 +10,6 @@ export const ExplodingBone = ({ size = 40 }) => {
   const [visibilityOfBone, setVisibiltyOfBone] = useState(true);
 
   const triggerExplosion = () => {
-    toast.error("Not This Bone !!!");
     setExplode(true);
     setVisibiltyOfBone(false);
     setTimeout(() => setExplode(false), 1000); // reset after 1s

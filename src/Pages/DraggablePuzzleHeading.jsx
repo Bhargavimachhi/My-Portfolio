@@ -15,7 +15,7 @@ export const DraggablePuzzleHeading = () => {
   const [hintIndex, setHintIndex] = useState(0);
   const hints = [
     "There are 4 Different Ways to solve this Puzzle, Explore Hints to Solve the Puzzle 🧩",
-    "Think like a sleepy dog 🐶... Where would you find the bone? 🦴",
+    "Think like a sleepy dog 🐶... Where would you find the bone? 🦴 Look Closely 👀",
     "Think like a coder 👩‍💻... How can you use tailwind css to get rid of the dog? 💻",
     "Have you worked with Local Storage ? 📠...Try changing something in local storage ✍️",
     "Skipping the puzzle would be the 4th way to solve the puzzle 😁",
