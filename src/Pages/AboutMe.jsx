@@ -5,6 +5,7 @@ import { Navbar } from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { AboutMePhotoCarousel } from "./AboutMePhotoCarousel";
 
 export const AboutMe = () => {
   const navigate = useNavigate();
@@ -30,6 +31,8 @@ export const AboutMe = () => {
       <BackgroundBeamsWithCollision >
         <Achievements />
       </BackgroundBeamsWithCollision>
+
+      <AboutMePhotoCarousel />
       <Footer />
     </>
   );
