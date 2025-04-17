@@ -9,6 +9,7 @@ import {
   Gift,
   Ham,
   Home,
+  LetterText,
   Utensils,
   Volleyball,
 } from "lucide-react";
@@ -22,6 +23,8 @@ import dogWithMirror from "../assets/Videos/dog-with-mirror.mp4";
 import dogWithHome from "../assets/Videos/dog-with-home.mp4";
 import dogWithBone from "../assets/Videos/dog-with-bone.mp4";
 import dogJumping from "../assets/Videos/dog-jumping.mp4";
+import dogBarking from "../assets/Videos/dog-barking.mp4";
+import dogBarkingInEnglish from "../assets/Videos/dog-barking-in-english.mp4";
 
 import { FloatingDock } from "@/components/ui/floating-dock";
 
@@ -29,7 +32,7 @@ export const Puzzle = () => {
   const navigate = useNavigate();
   const [showInputText, setShowInputText] = useState(false);
   const [text, setText] = useState("");
-  const [video, setVideo] = useState(dogSitting);
+  const [video, setVideo] = useState(dogBarking);
   const [videoReady, setVideoReady] = useState(true);
   const videoRef = useRef(null);
   const wrongBoneText = [
@@ -40,7 +43,7 @@ export const Puzzle = () => {
 
   const boneFound = () => {
     changeVideo(dogWithBone);
-    toast.success("Hurray !!! You Found the Bone, now doggy can sleep");
+    toast.success("Hurray !!! You Found the Bone, now doggy can focus on bone");
     setTimeout(() => {
       markPuzzleAsSolved();
     }, 3000);
@@ -194,22 +197,38 @@ export const Puzzle = () => {
       })}
 
       <div className="relative z-10">
-        <video
-          ref={videoRef}
-          width={800}
-          height={800}
-          autoPlay
-          loop={video === dogSitting}
-          muted
-          id="dog-video"
-          onClick={() => setShowInputText(!showInputText)}
-          onCanPlay={() => setVideoReady(true)} // this triggers when video is ready to play
-          className={`relative transition-opacity duration-500 ${
-            videoReady ? "opacity-100" : "opacity-0"
-          }`}
-          src={video}
-          onEnded={() => changeVideo(dogSitting)}
-        ></video>
+        <div className="flex items-center">
+          <video
+            ref={videoRef}
+            width={800}
+            height={800}
+            autoPlay
+            loop={video === dogSitting}
+            muted
+            id="dog-video"
+            onClick={() => setShowInputText(!showInputText)}
+            onCanPlay={() => setVideoReady(true)} // this triggers when video is ready to play
+            className={`relative transition-opacity duration-500 ${
+              videoReady ? "opacity-100" : "opacity-0"
+            }`}
+            src={video}
+            onEnded={() => changeVideo(dogBarking)}
+          ></video>
+          <FloatingDock
+            items={[
+              {
+                title: "Use Translator",
+                icon: (
+                  <LetterText
+                    size={50}
+                    className="text-yellow-500 cursor-pointer"
+                    onClick={() => changeVideo(dogBarkingInEnglish)}
+                  />
+                ),
+              },
+            ]}
+          />
+        </div>
 
         <div className="absolute flex flex-wrap items-center justify-center w-full mt-0">
           <FloatingDock
