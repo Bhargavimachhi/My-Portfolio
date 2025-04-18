@@ -181,7 +181,7 @@ export const Puzzle = () => {
         >
           <Bone
             size={40}
-            className="opacity-70 text-gray-100 hover:scale-110 transition-transform duration-200 hover:text-gray-500"
+            className="opacity-90 text-gray-100 hover:scale-110 transition-transform duration-200 hover:text-gray-500"
           />
         </div>
 
