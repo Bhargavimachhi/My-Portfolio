@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This site showcases my projects, skill
 
 ## 🌐 Live Website
 
-[Visit My Portfolio]([https://bhargavimachhi.github.io/My-Portfolio/])
+<a href="https://bhargavi-machhi-portfolio.vercel.app/" > Visit My Portfolio </a>
 
 ## 🚀 Features
 
