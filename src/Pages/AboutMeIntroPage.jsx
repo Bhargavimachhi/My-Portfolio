@@ -21,7 +21,7 @@ export const AboutMeIntroPage = () => {
               </div>
             </h1>
             <h2 className="text-lg font-light mb-3">
-              😊 I am borned and raised in India.
+              😊 I was born and raised in India.
             </h2>
 
             <h2 className="text-lg font-light mb-3">
@@ -38,7 +38,7 @@ export const AboutMeIntroPage = () => {
             </h2>
 
             <h1 className="text-2xl md:text-3xl font-light mb-3 mt-6">
-              Fun Fact About Me
+              Wanna know about my Hobbies ?
             </h1>
 
             <h2 className="text-lg font-light mb-3">
