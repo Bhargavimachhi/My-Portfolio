@@ -6,9 +6,9 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: "Home", url: "/My-Portfolio" },
-    { name: "Work", url: "/My-Portfolio/projects" },
-    { name: "AboutMe", url: "/My-Portfolio/about-me" },
+    { name: "Home", url: "/" },
+    { name: "Work", url: "/projects" },
+    { name: "AboutMe", url: "/about-me" },
     {
       name: "Resume",
       url: "https://drive.google.com/file/d/1_WlpZjqprmosIAp85O-xUK0-X1cu4ADT/view?usp=sharing",

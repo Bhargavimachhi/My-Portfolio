@@ -14,7 +14,7 @@ export const AboutMe = () => {
   useEffect(() => {
     const puzzleData = JSON.parse(localStorage.getItem("puzzle"));
     if (!puzzleData?.puzzleSolved) {
-      navigate("/My-Portfolio/puzzle");
+      navigate("/puzzle");
     }
     setLoading(false);
   }, [navigate]);

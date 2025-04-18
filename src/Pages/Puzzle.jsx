@@ -62,7 +62,7 @@ export const Puzzle = () => {
 
   const markPuzzleAsSolved = () => {
     localStorage.setItem("puzzle", JSON.stringify({ puzzleSolved: true }));
-    navigate("/My-Portfolio");
+    navigate("/");
   };
 
   const changeVideo = (newVideo) => {

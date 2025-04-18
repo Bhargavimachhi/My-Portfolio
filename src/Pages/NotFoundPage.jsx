@@ -11,7 +11,7 @@ export const NotFoundPage = () => {
           Sorry, we couldn't find the page you're looking for.
         </p>
         <div className="flex items-center justify-center mt-10 gap-x-6">
-          <Link to="/My-Portfolio" className="text-sm font-semibold text-text">
+          <Link to="/" className="text-sm font-semibold text-text">
             Go Back Home <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
