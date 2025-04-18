@@ -62,7 +62,7 @@ export const Puzzle = () => {
 
   const markPuzzleAsSolved = () => {
     localStorage.setItem("puzzle", JSON.stringify({ puzzleSolved: true }));
-    navigate("/");
+    navigate("/My-Portfolio");
   };
 
   const changeVideo = (newVideo) => {
@@ -171,7 +171,7 @@ export const Puzzle = () => {
         >
           <Bone
             size={40}
-            className="text-gray-50 hover:scale-110 transition-transform duration-200 hover:text-gray-300"
+            className="opacity-70 text-gray-100 hover:scale-110 transition-transform duration-200 hover:text-gray-500"
           />
         </div>
 

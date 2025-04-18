@@ -11,10 +11,10 @@ function App() {
     <>
     <PuzzleIconButton />
       <Routes>
-        <Route path="/puzzle" element={<Puzzle />} />
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/My-Portfolio/puzzle" element={<Puzzle />} />
+        <Route path="/My-Portfolio" element={<HomePage />} />
+        <Route path="/My-Portfolio/about-me" element={<AboutMe />} />
+        <Route path="/My-Portfolio/projects" element={<Projects />} />
         
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -12,7 +12,7 @@ export const HomePage = () => {
   useEffect(() => {
     const puzzleData = JSON.parse(localStorage.getItem("puzzle"));
     if (!puzzleData?.puzzleSolved) {
-      navigate("/puzzle");
+      navigate("/My-Portfolio/puzzle");
     }
   }, [navigate]);
 

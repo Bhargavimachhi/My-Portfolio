@@ -1,4 +1,4 @@
-import { image } from "@/assets/data/myIntroProfileImage";
+import { image } from "@/assets/data/aboutMeProfileImage";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 export const AboutMeIntroPage = () => {

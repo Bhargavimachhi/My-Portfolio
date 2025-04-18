@@ -30,7 +30,7 @@ export const DraggablePuzzleHeading = () => {
 
   const markPuzzleAsSolved = () => {
     localStorage.setItem("puzzle", JSON.stringify({ puzzleSolved: true }));
-    navigate("/");
+    navigate("/My-Portfolio");
   };
 
   const nextHint = () => {

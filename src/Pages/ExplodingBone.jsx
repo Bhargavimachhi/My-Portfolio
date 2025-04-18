@@ -16,7 +16,7 @@ export const ExplodingBone = ({ size = 40 }) => {
   };
 
   return (
-    <div className="relative z-20 w-fit h-fit" onClick={triggerExplosion}>
+    <div className="relative z-20 w-fit h-fit transform-transition duration-300 hover:scale-125" onClick={triggerExplosion}>
       {/* Bone Icon */}
       {visibilityOfBone && (
         <Bone size={size} className="cursor-pointer text-gray-800" />
