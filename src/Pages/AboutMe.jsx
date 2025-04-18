@@ -1,7 +1,7 @@
 import { AboutMeIntroPage } from "./AboutMeIntroPage";
 import { Achievements } from "./Achievements";
-import { Footer } from "../components/Footer";
-import { Navbar } from "../components/NavBar";
+import { Footer } from "./Footer";
+import { Navbar } from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
@@ -25,10 +25,10 @@ export const AboutMe = () => {
   return (
     <>
       <Navbar />
-      <BackgroundBeamsWithCollision >
+      <BackgroundBeamsWithCollision>
         <AboutMeIntroPage />
       </BackgroundBeamsWithCollision>
-      <BackgroundBeamsWithCollision >
+      <BackgroundBeamsWithCollision>
         <Achievements />
       </BackgroundBeamsWithCollision>
 

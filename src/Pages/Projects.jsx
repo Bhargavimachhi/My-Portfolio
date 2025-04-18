@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { projects } from "../assets/data/projects";
-import { Footer } from "../components/Footer";
-import { Navbar } from "../components/NavBar";
+import { Footer } from "./Footer";
+import { Navbar } from "./Navbar";
 import { useEffect } from "react";
 
 export const Projects = () => {
