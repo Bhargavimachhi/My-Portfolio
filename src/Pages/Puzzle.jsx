@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { DraggablePuzzleHeading } from "./DraggablePuzzleHeading";
@@ -58,8 +58,7 @@ export const Puzzle = () => {
       setTimeout(() => {
         markPuzzleAsSolved();
       }, 3000);
-    }
-    else if(curr === "kill" || curr === "gun") {
+    } else if (curr === "kill" || curr === "gun") {
       setShowInputText(false);
       const dogVideo = document.getElementById("dog-component");
       dogVideo.classList.add("hidden");
@@ -177,6 +176,10 @@ export const Puzzle = () => {
       className: "z-30 absolute left-1/2 mt-300 pb-100",
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
 
   return (
     <div className="relative w-full bg-[rgba(253,253,253,1)] p-6 flex flex-col items-center">
