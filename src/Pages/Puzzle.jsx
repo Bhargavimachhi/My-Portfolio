@@ -78,6 +78,16 @@ export const Puzzle = () => {
 
   const dogActionButtons = [
     {
+      title: "Use Translator",
+      icon: (
+        <LetterText
+          size={50}
+          className="text-yellow-500 cursor-pointer"
+          onClick={() => changeVideo(dogVideos["dogBarkingInEnglish"])}
+        />
+      ),
+    },
+    {
       title: "Lunch Time",
       icon: (
         <Ham
@@ -151,13 +161,13 @@ export const Puzzle = () => {
 
   const exploadingBones = [
     {
-      className: "absolute left-1/3 top-1/2",
+      className: "z-30 absolute left-1/3 top-1/2",
     },
     {
-      className: "absolute left-2/3 top-2/3",
+      className: "z-30 absolute left-2/3 top-2/3",
     },
     {
-      className: "absolute left-1/2 mt-300 pb-100",
+      className: "z-30 absolute left-1/2 mt-300 pb-100",
     },
   ];
 
@@ -206,29 +216,19 @@ export const Puzzle = () => {
             src={video}
             onEnded={() => changeVideo(dogVideos["dogBarking"])}
           ></video>
-          <FloatingDock
-            items={[
-              {
-                title: "Use Translator",
-                icon: (
-                  <LetterText
-                    size={50}
-                    className="text-yellow-500 cursor-pointer"
-                    onClick={() =>
-                      changeVideo(dogVideos["dogBarkingInEnglish"])
-                    }
-                  />
-                ),
-              },
-            ]}
-          />
         </div>
 
-        <div className="absolute flex flex-wrap items-center justify-center w-full mt-0">
-          <FloatingDock
-            mobileClassName="translate-y-40 h-50"
-            items={dogActionButtons}
-          />
+        <div className="absolute flex flex-col items-center justify-center w-full mt-0">
+          <div className="w-fit bg-gray-50 rounded-xl sm:flex">
+            <FloatingDock
+              mobileClassName="translate-y-40 h-50"
+              items={dogActionButtons.slice(0, 4)}
+            />
+            <FloatingDock
+              mobileClassName="ml-0 translate-y-40 h-50 pr-3"
+              items={dogActionButtons.slice(4)}
+            />
+          </div>
         </div>
 
         {/* Hint Popover */}
