@@ -43,7 +43,7 @@ export const DraggablePuzzleHeading = () => {
 
   return (
     <>
-      <Draggable nodeRef={nodeRef}>
+      <Draggable nodeRef={nodeRef} cancel=".no-drag">
         <div ref={nodeRef} className="cursor-grab active:cursor-grabbing">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 w-full max-w-5xl bg-white p-6 rounded-2xl shadow-md">
             <h2 className="w-full text-lg max-sm:text-base md:text-xl font-bold text-center md:text-left leading-snug text-gray-700">
@@ -57,7 +57,7 @@ export const DraggablePuzzleHeading = () => {
             <div className="flex gap-4 mt-4 md:mt-0">
               {/* Skip Button */}
               <button
-                className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition duration-300"
+                className="no-drag cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition duration-300"
                 onClick={skipPuzzle}
               >
                 Skip
@@ -65,7 +65,7 @@ export const DraggablePuzzleHeading = () => {
 
               {/* Hint Popover */}
               <Popover>
-                <PopoverTrigger className="cursor-pointer bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-xl transition duration-300">
+                <PopoverTrigger className="no-drag cursor-pointer bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-xl transition duration-300">
                   Hint
                 </PopoverTrigger>
                 <PopoverContent className="w-72 p-4 rounded-xl shadow-xl bg-white flex flex-col items-center relative space-y-4">

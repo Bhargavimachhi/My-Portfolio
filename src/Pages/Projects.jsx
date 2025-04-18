@@ -3,7 +3,6 @@ import { projects } from "../assets/data/projects";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 import { useEffect } from "react";
-import { Heart } from "lucide-react";
 import { FaHeart } from "react-icons/fa";
 
 export const Projects = () => {
@@ -33,7 +32,18 @@ export const Projects = () => {
                 />
                 {/* </div> */}
                 <h2 className="text-2xl font-bold mt-6">{project.name}</h2>
-                <p className={` mt-2 font-semibold ${project.id === 'simon-says' ? "text-red-500 flex items-center" : "text-gray-600"}`}>{project.description}{project.id === 'simon-says' && <FaHeart size={15} className="ml-2" />}</p>
+                <p
+                  className={` mt-2 font-semibold ${
+                    project.id === "simon-says"
+                      ? "text-red-500 flex items-center"
+                      : "text-gray-600"
+                  }`}
+                >
+                  {project.description}
+                  {project.id === "simon-says" && (
+                    <FaHeart size={15} className="ml-2" />
+                  )}
+                </p>
               </div>
             );
           })}
