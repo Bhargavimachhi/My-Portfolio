@@ -1,10 +1,10 @@
 import { HomePage } from "./Pages/HomePage";
 import { Route, Routes } from "react-router-dom";
 import { Projects } from "./Pages/Projects";
-import { NotFoundPage } from "./components/NotFoundPage";
 import { AboutMe } from "./Pages/AboutMe";
 import { Puzzle } from "./Pages/Puzzle";
 import { PuzzleIconButton } from "./Pages/PuzzleIconButton";
+import { NotFoundPage } from "./Pages/NotFoundPage";
 
 function App() {
   return (

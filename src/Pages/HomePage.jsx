@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { Navbar } from "../components/NavBar";
+import { Navbar } from "./Navbar";
 import { MyIntro } from "./MyIntro";
 import { Skills } from "./Skills";
-import { Footer } from "../components/Footer";
+import { Footer } from "./Footer";
 import { useNavigate } from "react-router-dom";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
