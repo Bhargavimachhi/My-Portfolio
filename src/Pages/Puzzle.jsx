@@ -21,6 +21,7 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 export const Puzzle = () => {
   const navigate = useNavigate();
   const [showInputText, setShowInputText] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
   const [text, setText] = useState("");
   const [video, setVideo] = useState(dogVideos["dogBarking"]);
   const [videoReady, setVideoReady] = useState(true);
@@ -57,6 +58,12 @@ export const Puzzle = () => {
       setTimeout(() => {
         markPuzzleAsSolved();
       }, 3000);
+    }
+    else if(curr === "kill" || curr === "gun") {
+      setShowInputText(false);
+      const dogVideo = document.getElementById("dog-component");
+      dogVideo.classList.add("hidden");
+      toast.error("You Killed The Dog !!! Peta is Looking for you");
     }
   };
 
@@ -181,7 +188,7 @@ export const Puzzle = () => {
         >
           <Bone
             size={40}
-            className="opacity-90 text-gray-100 hover:scale-110 transition-transform duration-200 hover:text-gray-500"
+            className="opacity-90 text-gray-200 hover:scale-110 transition-transform duration-200 hover:text-gray-500"
           />
         </div>
 
@@ -198,7 +205,7 @@ export const Puzzle = () => {
         );
       })}
 
-      <div className="relative z-10">
+      <div className="relative z-10" id="dog-component">
         <div className="flex items-center" id="dog-video-container">
           <video
             ref={videoRef}
@@ -233,16 +240,29 @@ export const Puzzle = () => {
 
         {/* Hint Popover */}
         {showInputText && (
-          <div className="absolute top-4 right-4 z-20 px-4 py-2 rounded-lg">
-            <div className="items-center gap-4">
+          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20 px-4 py-2 w-full sm:w-auto">
+            <div className="flex items-center justify-center gap-2 sm:gap-4">
               <input
                 id="width"
-                placeholder="Class Name ?"
-                className="border border-gray-300 rounded-md px-2 py-1"
+                placeholder="Enter className"
+                className="border border-gray-300 rounded-md px-2 py-1 h-10 w-full sm:w-96 md:w-[28rem] lg:w-[500px]"
                 value={text}
                 onChange={(e) => checkAnswerOfText(e.target.value)}
               />
+              <button
+                onClick={() => setShowInfo(!showInfo)}
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:bg-gray-100 transition"
+                title="Click for hint"
+              >
+                i
+              </button>
             </div>
+
+            {showInfo && (
+              <div className="mt-2 text-sm text-gray-700 bg-gray-100 p-2 rounded-md max-w-[90%] sm:max-w-[400px] mx-auto">
+                💡 Try using a Tailwind utility class that hides the element
+              </div>
+            )}
           </div>
         )}
       </div>
