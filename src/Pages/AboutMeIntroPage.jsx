@@ -56,7 +56,7 @@ export const AboutMeIntroPage = () => {
             <img
               src={image}
               alt="Bhargavi"
-              className="w-64 sm:w-70 md:w-80 p-[0.5] rounded-[22px]"
+              className="w-64 sm:w-70 md:w-80 rounded-[22px]"
             />
           </BackgroundGradient>
         </div>
