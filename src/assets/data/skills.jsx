@@ -1,13 +1,3 @@
-import express from "../Images/express.png";
-import sql from "../Images/sql.png";
-import langchain from "../Images/langchain.png";
-import dsa from "../Images/dsa.png";
-import dataScience from "../Images/data-science.png";
-import node from "../Images/node.png";
-import ai from "../Images/ai.jpg";
-import oops from "../Images/oops.jpg";
-import java from "../Images/java.webp";
-
 export const skills = [
   {
     name: "HTML",
@@ -23,7 +13,7 @@ export const skills = [
   },
   {
     name: "Java",
-    logo: java,
+    logo: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969826/portfolio/ylrlbkiiwt2xxuiebylx.webp",
   },
   {
     name: "Python",
@@ -39,15 +29,15 @@ export const skills = [
   },
   {
     name: "SQL",
-    logo: sql,
+    logo: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969862/portfolio/xzzwfkalqvs8d4urclnn.png",
   },
   {
     name: "LangChain",
-    logo: langchain,
+    logo: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969827/portfolio/jakjxa2kfs1p4lx6f1ur.png",
   },
   {
     name: "Express",
-    logo: express,
+    logo: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969829/portfolio/f8n7rkm6kxwhes693ens.png",
   },
   {
     name: "React",
@@ -55,7 +45,7 @@ export const skills = [
   },
   {
     name:"NodeJS",
-    logo:node
+    logo:"https://res.cloudinary.com/dwvppu30v/image/upload/v1744969831/portfolio/uudtyicmykdnakasfxsf.png"
   },
   {
     name: "AWS",
@@ -63,7 +53,7 @@ export const skills = [
   },
   {
     name: "AI",
-    logo: ai,
+    logo: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969826/portfolio/zkd2gvgyivua3e7jk4b9.jpg",
   },
   {
     name: "Git",
@@ -71,11 +61,11 @@ export const skills = [
   },
   {
     name: "Data Science",
-    logo: dataScience,
+    logo: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969829/portfolio/ds6tdk9h5sav9vfvkkns.png",
   },
   {
     name: "DSA",
-    logo: dsa,
+    logo: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969828/portfolio/mkjqmofj1aoptdn07r8a.png",
   },
   {
     name: "Linux",
@@ -91,7 +81,7 @@ export const skills = [
   },
   {
     name:"OOPs",
-    logo:oops
+    logo:"https://res.cloudinary.com/dwvppu30v/image/upload/v1744969832/portfolio/uis0ccp0qu3yyy86lwb3.jpg"
   },
 
 

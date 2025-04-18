@@ -1,9 +1,3 @@
-import amazon from "../Images/amazon.png";
-import leetcode from "../Images/leetcode.png";
-import codechef from "../Images/codechef.jpeg";
-import sih from "../Images/sih.jpg";
-import gfg from "../Images/gfg.png";
-
 export const achievements = [
   {
     description: [
@@ -12,7 +6,7 @@ export const achievements = [
       "Built auditing to track and verify task-related data.",
       "Learned unit testing, AWS tools, and clean coding.",
     ],
-    image: amazon,
+    image: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969825/portfolio/hbsrgbp73jghuq4mwamc.png",
     link: "https://drive.google.com/file/d/1WbsN8FygHd2Lj0R-mrzDnOORSubW--1h/view?usp=sharing",
   },
   {
@@ -22,7 +16,7 @@ export const achievements = [
       "LEETCODE BiWeekly Contest 153 - RANK 2089",
       "LEETCODE Weekly Contest 124 - RANK 2289",
     ],
-    image: leetcode,
+    image: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969833/portfolio/wcpfpewcm7ri2rykin4o.png",
     link: "https://leetcode.com/u/bhargavimachhi/",
   },
   {
@@ -32,7 +26,7 @@ export const achievements = [
       "Delivered functional website",
       "key-skills : MERN stack, LLM, Python",
     ],
-    image: sih,
+    image: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969836/portfolio/c6vsvqm1aai7aswxxttm.jpg",
     link: "https://www.linkedin.com/posts/bhargavi-machhi_smartindiahackathon2024-innovation-learningexperience-activity-7280158682787573760-6UKR?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4DrRIBgseqhhJdLd9D-ZeyBg5iQNiqXWU",
   },
   {
@@ -43,7 +37,7 @@ export const achievements = [
       "GFG Contest 143 - RANK 60",
       "GFG Contest 138 - RANK 155",
     ],
-    image: gfg,
+    image: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969832/portfolio/evgxs6ktxyzquftefv1r.png",
     link: "https://www.geeksforgeeks.org/user/bhargavimachhi/",
   },
   {
@@ -53,7 +47,14 @@ export const achievements = [
       "Highest Rating 1701",
       "Global Rank 11841",
     ],
-    image: codechef,
+    image: "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969827/portfolio/ckeepnoylnqcwowp7uoa.jpg",
     link: "https://www.codechef.com/users/machhibhargavi",
+  },
+  {
+    description:[
+      "Achieved AIR 6277 on my first attempt of gate 2025",
+    ],
+    image:"https://res.cloudinary.com/dwvppu30v/image/upload/v1744969831/portfolio/km3d4fvsl7r0gxpleo6i.jpg",
+    link:"https://res.cloudinary.com/dwvppu30v/image/upload/v1744969831/portfolio/km3d4fvsl7r0gxpleo6i.jpg",
   },
 ];

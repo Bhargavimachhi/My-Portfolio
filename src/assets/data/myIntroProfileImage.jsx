@@ -1,0 +1,1 @@
+export const image = "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969893/portfolio/cujqet8yikjstqeawzru.png";

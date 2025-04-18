@@ -1,0 +1,24 @@
+export const dogVideos = {
+  dogEating:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972116/portfolio/dog%20videos/rblguyagroy4goum2ulu.mp4",
+  dogSitting:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972105/portfolio/dog%20videos/kg5p1wrigoblxx0acauq.mp4",
+  dogJumping:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972115/portfolio/dog%20videos/hpjpj0ik5u931oh9ofxf.mp4",
+  dogWantsFood:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972080/portfolio/dog%20videos/vbuqxfld9hu3lktuysvd.mp4",
+  dogWithBall:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972068/portfolio/dog%20videos/hp30r2w0dvw4bwmoph4n.mp4",
+  dogWithBone:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972107/portfolio/dog%20videos/pozs6hiol8u16nmmrrpr.mp4",
+  dogBarking:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972060/portfolio/dog%20videos/hzlkmw2lgsgm9nmmdyvy.mp4",
+  dogBarkingInEnglish:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972060/portfolio/dog%20videos/cgpybfpnc2r8hb48ejoz.mp4",
+  dogWithHome:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972099/portfolio/dog%20videos/wwocnpcne27usvpqxdct.mp4",
+  dogWithBalloons:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972071/portfolio/dog%20videos/hnilshswtffememfvpih.mp4",
+  dogWithMirror:
+    "https://res.cloudinary.com/dwvppu30v/video/upload/v1744972101/portfolio/dog%20videos/obp6o3ozf6jkvnx9ssgd.mp4",
+};

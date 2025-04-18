@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/Images/profilephoto.png";
+import {image} from "@/assets/data/myIntroProfileImage";
 import { Link } from "react-router-dom";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 

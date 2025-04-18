@@ -14,17 +14,7 @@ import {
   Volleyball,
 } from "lucide-react";
 import { ExplodingBone } from "./ExplodingBone";
-import dogEating from "../assets/Videos/dog-eating.mp4";
-import dogPlayingWithBall from "../assets/Videos/dog-playing-with-ball.mp4";
-import dogSitting from "../assets/Videos/dog-sitting.mp4";
-import dogWantsFood from "../assets/Videos/dog-wants-food.mp4";
-import dogWithBallons from "../assets/Videos/dog-with-ballons.mp4";
-import dogWithMirror from "../assets/Videos/dog-with-mirror.mp4";
-import dogWithHome from "../assets/Videos/dog-with-home.mp4";
-import dogWithBone from "../assets/Videos/dog-with-bone.mp4";
-import dogJumping from "../assets/Videos/dog-jumping.mp4";
-import dogBarking from "../assets/Videos/dog-barking.mp4";
-import dogBarkingInEnglish from "../assets/Videos/dog-barking-in-english.mp4";
+import { dogVideos } from "../assets/data/dogVideos";
 
 import { FloatingDock } from "@/components/ui/floating-dock";
 
@@ -32,17 +22,17 @@ export const Puzzle = () => {
   const navigate = useNavigate();
   const [showInputText, setShowInputText] = useState(false);
   const [text, setText] = useState("");
-  const [video, setVideo] = useState(dogBarking);
+  const [video, setVideo] = useState(dogVideos["dogBarking"]);
   const [videoReady, setVideoReady] = useState(true);
   const videoRef = useRef(null);
-  const wrongBoneText = [
+  const [wrongBoneText, setWrongBoneText] = useState([
     "You got the wrong one again 😜",
     "Uhh Ahh Neither This One 🤷‍♀️",
     "Not This Bone Dear 🚫",
-  ];
+  ]);
 
   const boneFound = () => {
-    changeVideo(dogWithBone);
+    changeVideo(dogVideos["dogWithBone"]);
     toast.success("Hurray !!! You Found the Bone, now doggy can focus on bone");
     setTimeout(() => {
       markPuzzleAsSolved();
@@ -50,14 +40,16 @@ export const Puzzle = () => {
   };
 
   const wrongBoneFound = () => {
-    toast.error(wrongBoneText[wrongBoneText.length - 1]);
-    wrongBoneText.pop();
+    let curr = wrongBoneText;
+    toast.error(curr.pop());
+    setWrongBoneText(curr);
   };
 
   const checkAnswerOfText = (curr) => {
     setText(curr);
     if (curr === "hidden" || curr === "invisible" || curr === "opacity-0") {
-      const dogVideo = document.getElementById("dog-video");
+      setShowInputText(false);
+      const dogVideo = document.getElementById("dog-video-container");
       dogVideo.classList.add(curr);
       toast.success(
         `Hurray !!! ${curr} class name Makes the Division Invisible in Tailwind CSS`
@@ -91,7 +83,7 @@ export const Puzzle = () => {
         <Ham
           size={50}
           className="text-rose-400 cursor-pointer"
-          onClick={() => changeVideo(dogEating)}
+          onClick={() => changeVideo(dogVideos["dogEating"])}
         />
       ),
     },
@@ -101,7 +93,7 @@ export const Puzzle = () => {
         <Volleyball
           size={50}
           className="text-blue-500 cursor-pointer"
-          onClick={() => changeVideo(dogPlayingWithBall)}
+          onClick={() => changeVideo(dogVideos["dogWithBall"])}
         />
       ),
     },
@@ -111,7 +103,7 @@ export const Puzzle = () => {
         <Gift
           size={50}
           className="text-red-500 cursor-pointer"
-          onClick={() => changeVideo(dogWithBallons)}
+          onClick={() => changeVideo(dogVideos["dogWithBalloons"])}
         />
       ),
     },
@@ -121,7 +113,7 @@ export const Puzzle = () => {
         <Clapperboard
           size={50}
           className="text-gray-500 cursor-pointer"
-          onClick={() => changeVideo(dogWithMirror)}
+          onClick={() => changeVideo(dogVideos["dogWithMirror"])}
         />
       ),
     },
@@ -131,7 +123,7 @@ export const Puzzle = () => {
         <Utensils
           size={50}
           className="text-violet-500 cursor-pointer"
-          onClick={() => changeVideo(dogWantsFood)}
+          onClick={() => changeVideo(dogVideos["dogWantsFood"])}
         />
       ),
     },
@@ -141,7 +133,7 @@ export const Puzzle = () => {
         <Home
           size={50}
           className="text-orange-500 cursor-pointer"
-          onClick={() => changeVideo(dogWithHome)}
+          onClick={() => changeVideo(dogVideos["dogWithHome"])}
         />
       ),
     },
@@ -151,7 +143,7 @@ export const Puzzle = () => {
         <Crown
           size={50}
           className="text-yellow-500 cursor-pointer"
-          onClick={() => changeVideo(dogJumping)}
+          onClick={() => changeVideo(dogVideos["dogJumping"])}
         />
       ),
     },
@@ -197,13 +189,13 @@ export const Puzzle = () => {
       })}
 
       <div className="relative z-10">
-        <div className="flex items-center">
+        <div className="flex items-center" id="dog-video-container">
           <video
             ref={videoRef}
             width={800}
             height={800}
             autoPlay
-            loop={video === dogSitting}
+            loop={video === dogVideos["dogSitting"]}
             muted
             id="dog-video"
             onClick={() => setShowInputText(!showInputText)}
@@ -212,7 +204,7 @@ export const Puzzle = () => {
               videoReady ? "opacity-100" : "opacity-0"
             }`}
             src={video}
-            onEnded={() => changeVideo(dogBarking)}
+            onEnded={() => changeVideo(dogVideos["dogBarking"])}
           ></video>
           <FloatingDock
             items={[
@@ -222,7 +214,9 @@ export const Puzzle = () => {
                   <LetterText
                     size={50}
                     className="text-yellow-500 cursor-pointer"
-                    onClick={() => changeVideo(dogBarkingInEnglish)}
+                    onClick={() =>
+                      changeVideo(dogVideos["dogBarkingInEnglish"])
+                    }
                   />
                 ),
               },
