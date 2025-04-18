@@ -22,11 +22,12 @@ export const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 ">
           {projects.map((project) => {
             return (
-              <div className="flex flex-col items-center text-center sm:p-15">
+              <div className="flex flex-col items-center text-center sm:p-15 ">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-auto transition-transform transform duration-500 hover:scale-80 p-5"
+                  onClick={() => window.open(project.github)}
+                  className="w-full h-auto transition-transform transform duration-500 hover:scale-80 p-5 cursor-pointer"
                 />
                 {/* </div> */}
                 <h2 className="text-2xl font-semibold mt-6">{project.name}</h2>
