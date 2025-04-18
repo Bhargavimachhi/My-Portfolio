@@ -232,6 +232,7 @@ export const Card = ({
                 {card.title}
               </motion.p>
               <div className="py-10">{card.content}</div>
+              <img src={card.src} alt={card.title} />
             </motion.div>
           </div>
         )}
