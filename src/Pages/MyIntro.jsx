@@ -41,7 +41,7 @@ export const MyIntro = () => {
           <img
             src={image}
             alt="Bhargavi"
-            className="w-64 md:w-80 p-[0.5] rounded-[22px]"
+            className="w-64 md:w-80 rounded-[22px]"
           />
           {/* </div> */}
         </BackgroundGradient>
