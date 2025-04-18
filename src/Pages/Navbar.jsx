@@ -20,7 +20,7 @@ export const Navbar = () => {
     <nav className="w-full px-6 pt-6 mb-4">
       <div className="flex items-center justify-between">
         <div
-          className="text-2xl font-extrabold font-love-light text-7xl p-5 cursor-pointer"
+          className="text-2xl font-extrabold font-love-light text-7xl p-5 cursor-pointer text-4xl font-bold bg-gradient-to-r from-violet-500 via-blue-500 to-emerald-500 bg-clip-text text-transparent"
           onClick={() => navigate("/")}
         >
           B
