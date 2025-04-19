@@ -1,13 +1,14 @@
 import React from "react";
-import { FaHeart } from "react-icons/fa";
+import { FaCoffee, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { links } from "../assets/data/links";
+import { Coffee } from "lucide-react";
 
 export const Footer = () => {
   return (
     <nav className="w-full flex flex-col sm:flex-row items-center justify-between px-5 pt-6 mb-5 space-y-4 sm:space-y-0">
       <p className="flex items-center text-center text-base sm:text-lg font-medium">
-        Made by me with <FaHeart className="text-red-500 ml-2" />
+        Made by me with <FaHeart className="text-red-500 ml-2 mr-2" /> and lots of <Coffee className="text-green-500 ml-2 mr-2" />
       </p>
 
       <div className="flex flex-wrap justify-center sm:justify-end gap-3">

@@ -17,7 +17,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full px-6 pt-6 mb-4">
+    <nav className="w-full px-6 pt-6 mb-4 z-30 relative">
       <div className="flex items-center justify-between">
         <div
           className="text-2xl font-extrabold font-love-light text-7xl p-5 cursor-pointer text-4xl font-bold bg-gradient-to-r from-violet-500 via-blue-500 to-emerald-500 bg-clip-text text-transparent"
@@ -41,7 +41,7 @@ export const Navbar = () => {
               key={link.name}
               target={link.url.startsWith("http") ? "_blank" : "_self"}
               rel="noopener noreferrer"
-              className="border border-black px-5 py-2 rounded-full text-xl font-medium transition-transform duration-300 ease-out hover:scale-110"
+              className="border border-black bg-white px-5 py-2 rounded-full text-xl font-medium transition-transform duration-300 ease-out hover:scale-110"
             >
               {link.name}
             </Link>
@@ -58,7 +58,7 @@ export const Navbar = () => {
               key={link.name}
               target={link.url.startsWith("http") ? "_blank" : "_self"}
               rel="noopener noreferrer"
-              className="w-full border border-black px-5 py-2 rounded-full text-xl font-medium transition-transform duration-300 ease-out hover:scale-105"
+              className="w-full border border-black bg-white px-5 py-2 rounded-full text-xl font-medium transition-transform duration-300 ease-out hover:scale-105"
               onClick={() => setIsOpen(false)} // close menu on click
             >
               {link.name}

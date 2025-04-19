@@ -5,6 +5,7 @@ import { AboutMe } from "./Pages/AboutMe";
 import { Puzzle } from "./Pages/Puzzle";
 import { PuzzleIconButton } from "./Pages/PuzzleIconButton";
 import { NotFoundPage } from "./Pages/NotFoundPage";
+import { Project } from "./Pages/Project";
 
 function App() {
   return (
@@ -15,6 +16,13 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about-me" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
+        <Route
+          path="/project/:id"
+          element={
+            <Project
+            />
+          }
+        />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
