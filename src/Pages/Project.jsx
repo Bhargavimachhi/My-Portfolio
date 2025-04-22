@@ -6,16 +6,27 @@ import { ProjectHeadingImage } from "./ProjectHeadingImage";
 import { ProjectPortals } from "./ProjectPortals";
 import { ProjectDetails } from "./ProjectDetails";
 import { Footer } from "./Footer";
+import { NotFoundPage } from "./NotFoundPage";
 
 export const Project = () => {
   const { id } = useParams();
   const [project, setProject] = useState({});
   const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     setProject(projectsDetails[id]);
+
+    if (!projectsDetails[id]) {
+      setNotFound(true);
+    }
+
     setLoading(false);
   }, [id, projectsDetails]);
+
+  if (notFound) {
+    return <NotFoundPage />;
+  }
 
   if (loading) {
     return;
