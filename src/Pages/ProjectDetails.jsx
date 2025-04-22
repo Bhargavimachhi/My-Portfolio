@@ -1,50 +1,73 @@
+import {
+  CircleCheckBig,
+  CircleHelp,
+  HeartHandshake,
+  SplinePointer,
+  UsersRound,
+} from "lucide-react";
+
 export const ProjectDetails = ({ project }) => {
   return (
     <>
-      <div className="md:flex  justify-start w-full mt-20">
-        {project?.tools && (
-          <div className="ml-20">
-            <h1 className="text-2xl font-semibold">Tools</h1>
-            {project.tools.map((tool) => {
-              return <p className="text-xl m-1">{tool}</p>;
-            })}
-          </div>
-        )}
-        {project?.team && (
-          <div className="ml-20">
-            <h1 className="text-2xl font-semibold">Team</h1>
-            {project.team.map((member) => {
-              return <p className="text-xl m-1">{member}</p>;
-            })}
-          </div>
-        )}
+      <div className="md:flex  justify-start w-full gap-10">
+        <Info
+          name="Tools"
+          informations={project.tools}
+          logo={<SplinePointer size={20} className="mr-5 text-yellow-400" />}
+        />
+        <Info
+          name="Team"
+          informations={project.team}
+          logo={<UsersRound size={20} className="mr-5 text-blue-500" />}
+        />
       </div>
       <div className="w-full">
-        {project?.problem && (
-          <div className="m-20">
-            <h1 className="text-2xl font-semibold">Problem</h1>
-            <p className="text-xl">{project.problem}</p>
-          </div>
-        )}
+        <Info
+          name="Problem"
+          informations={project.problem}
+          logo={<CircleHelp size={20} className="mr-5 text-red-500" />}
+        />
       </div>
       <div className="w-full">
-        {project?.solution && (
-          <div className="m-20">
-            <h1 className="text-2xl font-semibold">Solution</h1>
-            <p className="text-xl">{project.solution}</p>
-          </div>
-        )}
+        <Info
+          name="Solution"
+          informations={project.tools}
+          logo={<CircleCheckBig size={20} className="mr-5 text-green-500" />}
+        />
       </div>
       <div className="w-full">
-        {project?.features && (
-          <div className="m-20">
-            <h1 className="text-2xl font-semibold">Features</h1>
-            {project.features.map((feature) => {
-              return <p className="text-xl m-1">{feature}</p>;
-            })}
-          </div>
-        )}
+        <Info
+          name="Features"
+          informations={project.features}
+          logo={<HeartHandshake size={25} className="mr-5 text-pink-400" />}
+        />
       </div>
+    </>
+  );
+};
+
+const Info = ({ name, informations, logo }) => {
+  return (
+    <>
+      {informations && (
+        <div className="m-20">
+          <div className="flex items-center">
+            {logo}
+            <h1 className="text-2xl font-semibold">{name}</h1>
+          </div>
+          {typeof informations == "string" && (
+            <p key={0} className="text-xl m-1">
+              {informations}
+            </p>
+          )}
+          {typeof informations != "string" &&
+            informations.map((info, index) => (
+              <p key={index} className="text-xl m-1">
+                {info}
+              </p>
+            ))}
+        </div>
+      )}
     </>
   );
 };
