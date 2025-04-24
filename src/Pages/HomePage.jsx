@@ -5,6 +5,7 @@ import { Skills } from "./Skills";
 import { Footer } from "./Footer";
 import { useNavigate } from "react-router-dom";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { FeedbackForm } from "./FeedBackForm";
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -25,7 +26,9 @@ export const HomePage = () => {
       <BackgroundBeamsWithCollision>
         <Skills />
       </BackgroundBeamsWithCollision>
-
+      <BackgroundBeamsWithCollision>
+        <FeedbackForm />
+      </BackgroundBeamsWithCollision>
       <Footer />
     </>
   );
