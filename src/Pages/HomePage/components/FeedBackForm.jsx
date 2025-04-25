@@ -15,7 +15,7 @@ export const FeedbackForm = () => {
   };
 
   return (
-    <div className="w-full px-4 sm:px-6 md:px-12 lg:px-32 xl:px-48 py-10">
+    <div className="w-full px-4 sm:px-6 md:px-12 lg:px-32 xl:px-48 py-10 mt-20">
       <div className="w-full bg-white bg-opacity-90 rounded-2xl shadow-lg p-6">
         <h1 className="text-4xl font-bold mb-8 text-center">
           We value your feedback!

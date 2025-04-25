@@ -6,17 +6,17 @@ export const ProjectPortals = ({ portals }) => {
       <div className="items-center">
         {portals.map((portal) => {
           return (
-            <div key={portal.name}>
+            <div key={portal.name} className="p-5">
               {portal.images && (
-                <div className="m-20 border-1 shadow-xl rounded-2xl">
+                <div className="border-1 shadow-xl rounded-2xl p-5">
                   {portal.name && (
-                    <h1 className="w-full text-center text-3xl m-10 font-semibold">
+                    <h1 className="w-full text-center text-3xl font-semibold p-5">
                       {portal.name}
                     </h1>
                   )}
                   <AnimatedTestimonials
                     key={portal.name}
-                    className="m-0"
+                    className="m-5"
                     testimonials={portal.images}
                   />
                 </div>

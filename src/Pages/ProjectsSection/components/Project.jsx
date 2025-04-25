@@ -17,6 +17,7 @@ export const Project = () => {
 
   useEffect(() => {
     setProject(projectsDetails[id]);
+    console.log(projectsDetails[id]);
 
     if (!projectsDetails[id]) {
       setNotFound(true);

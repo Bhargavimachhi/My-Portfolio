@@ -50,7 +50,7 @@ const Info = ({ name, informations, logo }) => {
   return (
     <>
       {informations && (
-        <div className="m-20">
+        <div className="m-10">
           <div className="flex items-center">
             {logo}
             <h1 className="text-2xl font-semibold">{name}</h1>
