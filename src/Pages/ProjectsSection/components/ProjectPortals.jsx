@@ -6,7 +6,7 @@ export const ProjectPortals = ({ portals }) => {
       <div className="items-center">
         {portals.map((portal) => {
           return (
-            <div>
+            <div key={portal.name}>
               {portal.images && (
                 <div className="m-20 border-1 shadow-xl rounded-2xl">
                   {portal.name && (

@@ -31,7 +31,7 @@ export const ProjectDetails = ({ project }) => {
       <div className="w-full">
         <Info
           name="Solution"
-          informations={project.tools}
+          informations={project.solution}
           logo={<CircleCheckBig size={20} className="mr-5 text-green-500" />}
         />
       </div>

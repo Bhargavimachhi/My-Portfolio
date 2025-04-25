@@ -1,11 +1,11 @@
-import { AboutMeIntroPage } from "./AboutMeIntroPage";
-import { Achievements } from "./Achievements";
-import { Footer } from "./Footer";
-import { Navbar } from "./Navbar";
+import { AboutMeIntroPage } from "./components/AboutMeIntroPage";
+import { Achievements } from "./components/Achievements";
+import { Footer } from "../Footer";
+import { Navbar } from "../Navbar";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { AboutMePhotoCarousel } from "./AboutMePhotoCarousel";
+import { AboutMePhotoCarousel } from "./components/AboutMePhotoCarousel";
 
 export const AboutMe = () => {
   const navigate = useNavigate();

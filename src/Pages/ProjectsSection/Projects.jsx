@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { projects } from "../assets/data/projects";
-import { Footer } from "./Footer";
-import { Navbar } from "./Navbar";
+import { projects } from "../../assets/data/projects";
+import { Footer } from "../Footer";
+import { Navbar } from "../Navbar";
 import { useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
 
@@ -15,7 +15,6 @@ export const Projects = () => {
     }
   }, [navigate]);
 
-  
   return (
     <>
       <Navbar />

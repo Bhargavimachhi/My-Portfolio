@@ -10,9 +10,9 @@ export const ProjectHeadingImage = ({
 
   const handleNavigation = () => {
     if (liveLink) {
-      window.location.href = liveLink;
+      window.open(liveLink) ;
     } else if (github) {
-      window.location.href = github;
+      window.open(github);
     }
   };
   return (

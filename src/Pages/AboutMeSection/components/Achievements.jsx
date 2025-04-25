@@ -1,4 +1,4 @@
-import { achievements } from "../assets/data/achievements";
+import { achievements } from "../../../assets/data/achievements";
 
 export const Achievements = () => {
   return (

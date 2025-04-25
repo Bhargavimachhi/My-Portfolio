@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { Navbar } from "./Navbar";
-import { MyIntro } from "./MyIntro";
-import { Skills } from "./Skills";
-import { Footer } from "./Footer";
+import { Navbar } from "../Navbar";
+import { MyIntro } from "../MyIntro";
+import { Skills } from "./components/Skills";
+import { Footer } from "../Footer";
 import { useNavigate } from "react-router-dom";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { FeedbackForm } from "./FeedBackForm";
+import { FeedbackForm } from "./components/FeedBackForm";
 
 export const HomePage = () => {
   const navigate = useNavigate();

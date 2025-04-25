@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { DraggablePuzzleHeading } from "./DraggablePuzzleHeading";
+import { DraggablePuzzleHeading } from "./components/DraggablePuzzleHeading";
 import {
   Bone,
   Clapperboard,
@@ -13,8 +13,8 @@ import {
   Utensils,
   Volleyball,
 } from "lucide-react";
-import { ExplodingBone } from "./ExplodingBone";
-import { dogVideos } from "../assets/data/dogVideos";
+import { ExplodingBone } from "./components/ExplodingBone";
+import { dogVideos } from "../../assets/data/dogVideos";
 
 import { FloatingDock } from "@/components/ui/floating-dock";
 
