@@ -26,7 +26,7 @@ export const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.name}
-                  onClick={() => window.open(project.github)}
+                  onClick={() => navigate(`/project/${project.id}`)}
                   className="w-full h-auto transition-transform transform duration-500 hover:scale-80 p-5 cursor-pointer"
                 />
                 {/* </div> */}

@@ -1,26 +1,24 @@
-export const healthPie = {
+export const freelancerApp = {
   id: "freelancer-app",
   title: "Freelancing Website",
   description: "website for fitness enthusiastics",
   imageSrc:
     "https://res.cloudinary.com/dwvppu30v/image/upload/v1744969831/portfolio/paoephb4lqhnec0o53b0.png",
   problem:
-    "",
-  solution:
-    "",
-  team: [
-    "Bhargavi - Full Stack",
-    "Manush - Full Stack",
-    "Mayur - Front End",
-  ],
+    "Existing freelancing platforms are primarily built for one-to-one interactions between clients and freelancers. While this model works for simple projects, it falls short for more complex, team-based assignments that require collaboration among multiple freelancers. These platforms lack built-in features for real-time teamwork, coordinated task management, and shared communication among multiple contributors. As a result, teams are forced to use external tools (like Slack, Trello, or Google Docs), creating fragmented workflows, miscommunication, and reduced productivity.",
+  solution: "Our platform bridges this critical gap by enabling seamless collaboration within freelancing projects. We empower clients to build and manage teams of freelancers directly within the platform, fostering better coordination, transparency, and efficiency. With integrated tools that support team communication, role assignment, and shared workspaces, freelancers can now collaborate effectively on larger and more complex projects—all under one roof.",
+  team: ["Bhargavi - Full Stack", "Manush - Full Stack", "Mayur - Front End"],
   tools: ["ReactJS", "MongoDB", "ExpressJS", "NodeJS", "LLM", "Python"],
   github: "https://github.com/Bhargavimachhi/Freelancer-App",
 
   features: [
-    "🔐 User Authentication (signup and login)",
-    "🧑‍⚕️ Manage Appointments with Doctors",
-    "🍎 Search for Recipes based on Nutritional Needs",
-    "🍽️ Track Meals and View Nutritional Information",
+    "🔐 User Registration and Authentication: Secure sign-up and login for freelancers and clients.",
+    "👤 Profile Creation and Management: Detailed profiles showcasing skills, experience, portfolios, and ratings.",
+    "🧑‍💼 Job Posting and Bidding System: Clients post projects and receive bids from interested freelancers.",
+    "💬 Messaging System: Direct and group messaging between freelancers and clients for smooth communication.",
+    "🤝 Team Collaboration (Core Feature): Ability to add multiple freelancers to a single project, assign tasks, and share updates.",
+    "💸 Payment Processing and Invoicing: Integrated, secure transactions with automated invoice generation.",
+    "🌟 Review and Rating System: Transparent feedback to build trust and showcase performance history."
   ],
 
   portals: [
@@ -70,7 +68,6 @@ export const healthPie = {
           name: "Monthly Calender",
           quote: "",
         },
-        ,
         {
           src: "https://res.cloudinary.com/dwvppu30v/image/upload/v1745756820/portfolio/website%20images/health-pie/Screenshot_2025-04-27_175643_rx1up8.png",
           designation: "Book appointments",

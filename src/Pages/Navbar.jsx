@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Hamburger and Close icons
+import { Menu, X } from "lucide-react"; 
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ export const Navbar = () => {
     { name: "AboutMe", url: "/about-me" },
     {
       name: "Resume",
-      url: "https://drive.google.com/file/d/1_WlpZjqprmosIAp85O-xUK0-X1cu4ADT/view?usp=sharing",
+      url: "https://drive.google.com/file/d/1f4iXxhkdpW3URv4Fujsotd18LOg8cSBw/view?usp=drive_link",
     },
   ];
 
